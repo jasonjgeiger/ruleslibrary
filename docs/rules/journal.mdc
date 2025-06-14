@@ -1,0 +1,151 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Journal Rules
+
+## Purpose
+The project journal serves as a chronological record of development milestones, decisions, and implementations. It provides a comprehensive history of the project's evolution and serves as a reference for understanding the context and rationale behind key decisions.
+
+## Structure
+
+### Entry Format
+Each journal entry should follow this structure:
+
+1. **Title**
+   - Use a clear, descriptive title that summarizes the milestone or change
+   - Format as a level 2 heading (##)
+
+2. **Prompt Section**
+   - Labeled as "### Prompt"
+   - Contains the exact prompt or request that initiated the change
+   - Preserves the original wording and context
+
+3. **Summary of Response & Actions**
+   - Labeled as "### Summary of response & actions"
+   - Bullet-point list of specific changes and implementations
+   - Includes file paths for created or modified files
+   - References any relevant Git commits
+
+### Special Entry Types
+
+#### Troubleshooting Entries
+For bug fixes or troubleshooting, include:
+- Problem Summary section
+- Troubleshooting Process with subsections
+- Root Causes analysis
+- Final Solution details
+
+#### Implementation Entries
+For feature implementations, include:
+- Component/feature description
+- Technical details
+- File modifications
+- Any relevant architectural decisions
+
+## Content Guidelines
+
+### What to Document
+1. **Development Milestones**
+   - Feature implementations
+   - Major architectural decisions
+   - Significant refactoring
+   - Bug fixes and solutions
+
+2. **Technical Decisions**
+   - Technology choices
+   - Implementation approaches
+   - Design patterns adopted
+   - Performance optimizations
+
+3. **UI/UX Changes**
+   - Component updates
+   - Visual improvements
+   - User interaction modifications
+   - Accessibility enhancements
+
+4. **Data Structure Changes**
+   - Schema modifications
+   - Data normalization
+   - API structure updates
+   - Type system changes
+
+### Documentation Standards
+
+1. **Clarity**
+   - Use clear, concise language
+   - Provide context for decisions
+   - Explain technical terms when necessary
+
+2. **Completeness**
+   - Include all relevant file paths
+   - Reference specific code changes
+   - Note any dependencies or prerequisites
+
+3. **Chronology**
+   - Maintain chronological order
+   - Include dates for significant entries
+   - Link related entries when applicable
+
+4. **Code References**
+   - Use proper file path notation
+   - Include Git commit hashes when available
+   - Reference specific components or functions
+
+## Maintenance
+
+### Regular Updates
+- Document changes as they occur
+- Update the journal before ending development sessions
+- Review and update documentation when making significant changes
+
+### Quality Control
+- Ensure all entries follow the established format
+- Verify file paths and references are correct
+- Check for completeness and clarity
+- Maintain consistent formatting throughout
+
+### Version Control
+- Include Git commit references when available
+- Document version numbers for significant releases
+- Note any breaking changes or migrations
+
+## Integration with Other Documentation
+
+### Cross-References
+- Link to relevant PRD sections
+- Reference specific rules from other .mdc files
+- Connect related documentation entries
+
+### Documentation Hierarchy
+- Use the journal for chronological records
+- Reference detailed specifications in PRD
+- Link to specific implementation rules in other .mdc files
+
+## Best Practices
+
+1. **Timeliness**
+   - Document changes promptly
+   - Update the journal before ending development sessions
+   - Review and update documentation when making significant changes
+
+2. **Accuracy**
+   - Verify all technical details
+   - Double-check file paths and references
+   - Ensure commit hashes are correct
+
+3. **Completeness**
+   - Include all relevant changes
+   - Document both successes and challenges
+   - Note any dependencies or prerequisites
+
+4. **Organization**
+   - Maintain consistent formatting
+   - Use clear section headers
+   - Group related changes together
+
+5. **Accessibility**
+   - Use clear, concise language
+   - Provide context for technical terms
+   - Include examples when helpful

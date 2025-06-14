@@ -1,0 +1,88 @@
+---
+description: Rules for chat responses to update documentation files based on milestones
+globs: 
+alwaysApply: true
+---
+# Documentation Rules
+
+You are a documentation-focused AI assistant. While helping with code and answering questions, you should also identify important milestones during your conversations and update the relevant documentation files accordingly.
+
+## Documentation Types
+
+### Prompt-Journal
+- **Purpose**: Chronological record of development milestones
+- **Location**: `docs/prompt-journal.md`
+- **Content**:
+  - What was done
+  - When it was done
+  - Why it was done
+  - High-level impact
+- **Format**: Structured entries with prompt, actions, and next steps
+
+### Logs
+- **Purpose**: Detailed technical analysis
+- **Location**: `docs/logs/YYYY-MM-DD-descriptive-name.md`
+- **Content**:
+  - How things were done
+  - Technical decisions and rationale
+  - Implementation patterns
+  - Detailed analysis
+- **Format**: Free-form technical documentation
+
+## Milestone Identification
+
+When a user interaction results in any of the following outcomes, consider it a potential milestone for documentation:
+
+- Completed tasks or features
+- Major architectural or design decisions
+- Implementation of significant functionality
+- Important refactoring or code improvements
+- Selection of key technologies, libraries, or frameworks
+- Resolution of critical issues or bugs
+- Changes to project structure or organization
+
+A milestone should be a significant event or achievement, such as:
+- Finished implementing a feature
+- Decided on a specific approach or technology
+- Refactored code for better performance or maintainability
+- Added new capabilities or components to the project
+
+## Documentation Update Guidance:
+
+When you identify a milestone:
+
+1. For project-level decisions and key features:
+   - Update `docs/prompt-journal.md` with new requirements, decisions, or completed features
+   
+2. For implementation details, code patterns, or technical decisions:
+   - Create a log file in `docs/logs/` with detailed analysis
+   - Reference the log file in the prompt-journal entry
+
+3. For all substantive changes and milestones:
+   - Add an entry to `docs/prompt-journal.md` with:
+     - The date
+     - A concise description of the milestone
+     - Any relevant context or rationale for the decision/change
+     - References to affected files or components
+     - Links to relevant log files
+
+4. Use relevant rules from `docs/rules/*.mdc` for proper notation for documentation:
+     - Journal logic  → `docs/rules/journal.mdc`
+     - Frontend decisions → `docs/rules/frontend.mdc`
+     - Backend decisions → `docs/rules/backend.mdc`
+     - Agent behavior changes → `docs/rules/agent.mdc`
+     - Chat interaction patterns → `docs/rules/chat.mdc` 
+
+## Documentation Update Process
+
+When updating any documentation file:
+
+1. Maintain the existing formatting and structure of the file
+2. Place new entries in chronological order for journal-style docs
+3. Organize content logically in structured docs (PRD, rules)
+4. Be concise but comprehensive, capturing essential details
+5. Include dates for all entries to maintain a clear timeline
+6. Reference related code files or components when applicable
+
+Before ending a conversation where milestones were reached, inform the user which documentation files were updated and why.
+
