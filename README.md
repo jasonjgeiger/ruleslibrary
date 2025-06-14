@@ -58,16 +58,9 @@ To integrate this rules library into your own Cursor project:
 - **[Documentation Rules](docs/rules/documentation.mdc):** How to document, journal, and cross-reference work.
 - **[Journal Rules](docs/rules/journal.mdc):** Structure and standards for the project journal.
 - **[Chat Rules](docs/rules/chat.mdc):** How to interact with Cursor AI and format responses.
-- **[FastAPI Rules](docs/rules/fastapi.mdc):** Best practices for Python API development.
-- **[Next.js Rules](docs/rules/nextjs.mdc):** Best practices for fullstack development with Next.js.
+- **[FastAPI Rules](docs/rules/fastapi.mdc):** Best practices for Python API development. Sourced from [playbooks.com/rules/fastapi](https://playbooks.com/rules/fastapi)
+- **[Next.js Rules](docs/rules/nextjs.mdc):** Best practices for fullstack development with Next.js. Sourced from [playbooks.com/rules/nextjs](https://playbooks.com/rules/nextjs)
 - **[Git Rules](docs/rules/git.mdc):** Version control, commit, and branching best practices.
-- **[Analytics Rules](docs/rules/rule-analytics.mdc):** How rule usage is tracked and analyzed.
-
-## Contributing
-
-1. Follow the [Documentation Guidelines](docs/rules/documentation.mdc) and update the [Project Journal](docs/prompt-journal.md) for all significant changes.
-2. Adhere to all [Project Rules](#rules-overview) when writing code, documentation, or interacting with Cursor AI.
-3. Use the [Git Rules](docs/rules/git.mdc) for all version control operations.
-4. Reference and update analytics as needed.
+- **[Analytics Rules](docs/rules/rule-analytics.mdc):** How rule usage is tracked and analyzed. Sourced from [playbooks.com/rules/rule-analytics](https://playbooks.com/rules/rule-analytics)
 
 For detailed information, see the respective files in `docs/rules/`. 
