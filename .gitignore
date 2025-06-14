@@ -34,7 +34,6 @@ node_modules/
 .npm/
 
 # Logs
-logs/
 *.log
 
 # Cursor analytics and local settings
