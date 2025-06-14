@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+.npm/
+
+# Logs
+logs/
+*.log
+
+# Cursor analytics and local settings
+.cursor/analytics.md
+.cursor/local/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test and coverage outputs
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+coverage.xml
+
+# Misc
+*.swp
+*.bak
+*.tmp
+
+# Ignore personal notebooks or scratch files
+*.ipynb_checkpoints
+notebooks/
+
+# Ignore extension files
+.specstory/
+
+# Ignore compiled Markdown previews
+*.html
+
+# Ignore environment variable files
+.env
+.env.* 
