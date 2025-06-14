@@ -15,7 +15,17 @@ alwaysApply: true
      - When it was done
      - Why it was done
      - High-level impact
-   - **Format**: Structured entries with prompt, actions, and next steps
+   - **Format**: 
+     - Structured entries with prompt, actions, and next steps
+     - Date format: YYYY-MM-DD
+     - Always use current date for new entries
+     - Verify date accuracy before creating entries
+   - **Entry Structure**:
+     - Date and descriptive title
+     - Original prompt/request
+     - Actions taken
+     - Impact of changes
+     - Next steps
 
 2. **Logs**
    - **Purpose**: Detailed technical analysis
