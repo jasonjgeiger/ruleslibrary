@@ -37,8 +37,8 @@ node_modules/
 *.log
 
 # Cursor analytics and local settings
-.cursor/analytics.md
 .cursor/local/
+.cursor/rules/
 
 # Editor directories and files
 .vscode/

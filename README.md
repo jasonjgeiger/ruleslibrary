@@ -15,7 +15,7 @@ A comprehensive library of development rules and documentation guidelines for pr
 To integrate this rules library into your own Cursor project:
 
 1. **Copy the Rules and Documentation**
-   - Copy the entire `docs/rules/` directory into your project.
+   - Copy the the rules you want from  `docs/rules/` directory and paste them into your project's `.cursor/rules/`.
    - Optionally, copy `docs/prompt-journal.md` and `docs/logs/` if you want to maintain journaling and logs.
 
 2. **Update References**
