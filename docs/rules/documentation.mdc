@@ -5,84 +5,115 @@ alwaysApply: true
 ---
 # Documentation Rules
 
-You are a documentation-focused AI assistant. While helping with code and answering questions, you should also identify important milestones during your conversations and update the relevant documentation files accordingly.
-
 ## Documentation Types
 
-### Prompt-Journal
-- **Purpose**: Chronological record of development milestones
-- **Location**: `docs/prompt-journal.md`
-- **Content**:
-  - What was done
-  - When it was done
-  - Why it was done
-  - High-level impact
-- **Format**: Structured entries with prompt, actions, and next steps
+1. **Prompt-Journal**
+   - **Purpose**: Chronological record of development milestones
+   - **Location**: `docs/prompt-journal.md`
+   - **Content**:
+     - What was done
+     - When it was done
+     - Why it was done
+     - High-level impact
+   - **Format**: Structured entries with prompt, actions, and next steps
 
-### Logs
-- **Purpose**: Detailed technical analysis
-- **Location**: `docs/logs/YYYY-MM-DD-descriptive-name.md`
-- **Content**:
-  - How things were done
-  - Technical decisions and rationale
-  - Implementation patterns
-  - Detailed analysis
-- **Format**: Free-form technical documentation
+2. **Logs**
+   - **Purpose**: Detailed technical analysis
+   - **Location**: `docs/logs/YYYY-MM-DD-descriptive-name.md`
+   - **Content**:
+     - How things were done
+     - Technical decisions and rationale
+     - Implementation patterns
+     - Detailed analysis
+   - **Format**: Free-form technical documentation
+   - **Creation Guidelines**:
+     - Use format: `YYYY-MM-DD-descriptive-name.md`
+     - Include:
+       - Context of the discussion
+       - Detailed analysis or explanation
+       - Any relevant code snippets
+       - References to related files or documentation
+     - Reference in prompt-journal when created
+
+3. **Rules**
+   - **Purpose**: Guidelines and standards for development
+   - **Location**: `docs/rules/*.mdc`
+   - **Content**:
+     - Development standards
+     - Best practices
+     - Process guidelines
+   - **Format**: Structured markdown with clear sections
 
 ## Milestone Identification
 
-When a user interaction results in any of the following outcomes, consider it a potential milestone for documentation:
-
+Track and document significant events:
 - Completed tasks or features
-- Major architectural or design decisions
-- Implementation of significant functionality
-- Important refactoring or code improvements
-- Selection of key technologies, libraries, or frameworks
-- Resolution of critical issues or bugs
-- Changes to project structure or organization
-
-A milestone should be a significant event or achievement, such as:
-- Finished implementing a feature
-- Decided on a specific approach or technology
-- Refactored code for better performance or maintainability
-- Added new capabilities or components to the project
-
-## Documentation Update Guidance:
-
-When you identify a milestone:
-
-1. For project-level decisions and key features:
-   - Update `docs/prompt-journal.md` with new requirements, decisions, or completed features
-   
-2. For implementation details, code patterns, or technical decisions:
-   - Create a log file in `docs/logs/` with detailed analysis
-   - Reference the log file in the prompt-journal entry
-
-3. For all substantive changes and milestones:
-   - Add an entry to `docs/prompt-journal.md` with:
-     - The date
-     - A concise description of the milestone
-     - Any relevant context or rationale for the decision/change
-     - References to affected files or components
-     - Links to relevant log files
-
-4. Use relevant rules from `docs/rules/*.mdc` for proper notation for documentation:
-     - Journal logic  → `docs/rules/journal.mdc`
-     - Frontend decisions → `docs/rules/frontend.mdc`
-     - Backend decisions → `docs/rules/backend.mdc`
-     - Agent behavior changes → `docs/rules/agent.mdc`
-     - Chat interaction patterns → `docs/rules/chat.mdc` 
+- Major architectural decisions
+- Implementation of key functionality
+- Important refactoring
+- Technology selections
+- Critical issue resolutions
+- Project structure changes
 
 ## Documentation Update Process
 
-When updating any documentation file:
+1. **When to Update**
+   - After completing significant tasks
+   - When making architectural decisions
+   - Following important refactoring
+   - Upon resolving critical issues
+   - When changing project structure
 
-1. Maintain the existing formatting and structure of the file
-2. Place new entries in chronological order for journal-style docs
-3. Organize content logically in structured docs (PRD, rules)
-4. Be concise but comprehensive, capturing essential details
-5. Include dates for all entries to maintain a clear timeline
-6. Reference related code files or components when applicable
+2. **Update Guidelines**
+   - Maintain existing formatting and structure
+   - Place new entries in chronological order
+   - Be concise but comprehensive
+   - Include dates for all entries
+   - Reference related code files or components
 
-Before ending a conversation where milestones were reached, inform the user which documentation files were updated and why.
+3. **File Organization**
+   - Keep related documentation together
+   - Use consistent naming conventions
+   - Maintain clear directory structure
+   - Cross-reference related documents
+
+## Documentation Standards
+
+1. **Formatting**
+   - Use consistent markdown formatting
+   - Include clear section headers
+   - Maintain proper indentation
+   - Use lists for better readability
+
+2. **Content**
+   - Be clear and concise
+   - Include relevant context
+   - Provide examples when helpful
+   - Link to related resources
+
+3. **Maintenance**
+   - Regular review and updates
+   - Version control for all docs
+   - Keep documentation current
+   - Remove outdated information
+
+## Integration with Development
+
+1. **Code Documentation**
+   - Document code changes
+   - Update API documentation
+   - Maintain README files
+   - Keep changelog current
+
+2. **Process Documentation**
+   - Document development workflows
+   - Maintain setup instructions
+   - Keep deployment guides current
+   - Document testing procedures
+
+3. **Knowledge Base**
+   - Build searchable documentation
+   - Maintain troubleshooting guides
+   - Document common solutions
+   - Keep FAQs updated
 
