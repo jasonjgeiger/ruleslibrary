@@ -127,6 +127,36 @@ Organize and separate chat and documentation rules to make them more distinct an
 - Review and update other documentation to reflect new structure
 - Consider adding examples to rules for better clarity
 
+## 2025-06-14 - README Cleanup and Rules Directory Restructure
+
+### Prompt
+"Remember, recent udpates don't belong in the readme. If you want to reference them great, but the readme is intended to give people an overview and point them to relevant files. Clean it up. Also I moved rules to root, so document the change."
+
+### Summary of response & actions
+- **README Cleanup**: Removed "Recent Updates" section and simplified content for better overview focus
+- **Directory Structure Update**: Updated all references from `docs/rules/` to `rules/` to reflect move to root
+- **Path Corrections**: Fixed all rule file links throughout README to point to correct root location
+- **Content Streamlining**: 
+  - Removed detailed recent updates section
+  - Simplified Quick Start instructions
+  - Cleaned up usage instructions
+  - Maintained essential .mdc header examples
+  - Focused on overview and navigation purpose
+
+**Files Updated**:
+- `README.md` - Comprehensive cleanup and path corrections
+- All rule references updated to reflect new `rules/` root directory structure
+
+**Key Improvements**:
+- Clean, focused README that serves as overview and navigation
+- Accurate file paths reflecting current directory structure
+- Removed clutter while maintaining essential information
+- Better separation of concerns (overview vs detailed updates)
+
+**Impact**: README now properly serves its intended purpose as a clean overview and navigation guide, with accurate paths reflecting the current project structure.
+
+**Next Steps**: Future README updates should focus on overview and navigation, with detailed changes documented in journal entries rather than cluttering the main README.
+
 ## 2025-06-14 - Critical Date Accuracy Fix and Documentation Rule Enhancement
 
 ### Prompt
