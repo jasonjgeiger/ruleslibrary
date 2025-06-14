@@ -141,21 +141,24 @@ Organize and separate chat and documentation rules to make them more distinct an
   - `docs/rules/privacy-security.mdc` - Updated "Last Updated" field
   - `docs/rules/responsible-ai.mdc` - Updated "Last Updated" field  
   - `docs/analytics.md` - Corrected all recent rule update dates
+  - `README.md` - **ADDED**: Comprehensive update with new features, recent updates, enhanced project structure, and getting started guidance
 - **Documentation Rule Enhanced**: Added mandatory date verification requirements to `docs/rules/documentation.mdc`
   - CRITICAL section added requiring date command execution before documentation
   - Mandatory verification process established
   - Forbidden use of assumed or cached dates
   - Required ISO 8601 format (YYYY-MM-DD)
+  - **NEW**: Added mandatory README update requirements for major changes
 
 **Key Improvements**:
 - Mandatory `date` command execution before any documentation creation
 - Date verification process with cross-reference and consistency checks
 - Enhanced documentation standards with verified date requirements
 - Prevention of future timestamp errors through systematic verification
+- **README update requirements** added to documentation rules to prevent future omissions
 
-**Impact**: Establishes accurate chronological record-keeping and prevents future documentation timestamp errors through mandatory verification processes.
+**Impact**: Establishes accurate chronological record-keeping and prevents future documentation timestamp errors through mandatory verification processes. Ensures README stays current with major changes.
 
-**Next Steps**: All future documentation must follow the enhanced date verification requirements to maintain accurate project history.
+**Next Steps**: All future documentation must follow the enhanced date verification requirements and include mandatory README updates for significant changes to maintain accurate project history and current documentation.
 
 ## 2025-06-14 - Comprehensive Responsible AI Rule Implementation
 
