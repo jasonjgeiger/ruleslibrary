@@ -1,0 +1,236 @@
+---
+description: Privacy and Security Guidelines for AI Agent Operations
+globs: **/*.{js,jsx,ts,tsx,py,java,go,rs,php,rb,cs,cpp,c,h,hpp,scala,kt,swift,dart,elm,clj,cljs,hs,ml,fs,ex,exs,erl,pl,lua,jl,nim,zig,v,cr,d,pas,ada,cob,f90,f95,f03,f08,for,m,mm,r,html,htm,css,scss,sass,less,styl,vue,svelte,json,yaml,yml,toml,xml,ini,conf,cfg,env,properties,sql,proto,thrift,graphql,ipynb,pyx,pxd,pxi,md,mdx,rst,txt,dockerfile,makefile,cmake,package.json,requirements.txt,pipfile,gemfile,pom.xml,build.gradle,cargo.toml,composer.json,setup.py,pyproject.toml,poetry.lock,yarn.lock,package-lock.json,pnpm-lock.yaml,go.mod,go.sum},**/*{.config.js,.config.ts},**/webpack.config.*,**/vite.config.*,**/next.config.*,**/nuxt.config.*,**/vue.config.*,**/angular.json,**/tsconfig.json,**/jsconfig.json,**/eslint.*,**/prettier.*,**/babel.*,**/rollup.*,**/gulpfile.*,**/gruntfile.*,**/*.env*,**/docker-compose.{yml,yaml},**/cmakelists.txt
+alwaysApply: false
+---
+# Privacy and Security Rules
+
+## Core Principle
+Maintain strict privacy, security, and data protection standards while ensuring transparency and user control over all operations.
+
+## Auto-Attachment Scope
+This rule automatically applies to:
+- **Code Files**: All programming languages (JS/TS, Python, Java, Go, Rust, PHP, Ruby, C#, C/C++, etc.)
+- **Configuration Files**: Package managers, build tools, environment configs, CI/CD files
+- **Infrastructure Files**: Docker, Kubernetes, deployment scripts, makefiles
+- **Web Files**: HTML, CSS, SCSS, frontend framework configs
+- **Data Files**: JSON, XML, YAML, TOML, SQL scripts
+- **Documentation**: Markdown, MDX files containing code examples or security guidance
+- **Environment Files**: .env files, configuration files, secrets management
+
+## 1. File System Access Control
+
+### 1.1 Project Directory Restriction
+- **SCOPE**: Access, indexing, and scanning restricted to current project workspace directory and its subdirectories only
+- **PROJECT ROOT**: Defined as the directory containing `.git`, `.cursorrules`, or explicitly specified workspace root
+- **FORBIDDEN**: Never access parent directories (`../`), system directories (`/`, `C:\`), user home directories outside project scope
+- **SYMLINKS**: Treat symlinks pointing outside project as access violations
+
+### 1.2 Access Violation Alerts
+When any component attempts to access outside the project directory:
+```
+🚨 DIRECTORY/FILE ACCESS VIOLATION 🚨
+Attempted Access: [full path]
+Requested by: [user|agent|rule|mcp|code]
+Reason: [brief explanation]
+Action: Access denied
+```
+
+### 1.3 File Modification Control
+- **ALLOWED**: Create, edit, delete files only within project directory
+- **FORBIDDEN**: Modify system files, configuration files outside project, global settings
+- **EXCEPTION**: Global installs (see Section 2)
+
+## 2. Global System Changes
+
+### 2.1 Global Install Alerts
+Before any global installation:
+```
+⚠️ GLOBAL INSTALL REQUIRED ⚠️
+Package: [name and version]
+Type: [system-wide|user-wide|environment]
+Reason: [why global install needed]
+Risks: [potential security/system impacts]
+Alternatives: [local installation options if available]
+User Consent Required: [YES/NO]
+```
+
+### 2.2 User Consent Process
+- **MANDATORY**: Explicit user approval for global changes
+- **TIMEOUT**: Auto-deny after 5 minutes without user response
+- **LOGGING**: Record all consent decisions with timestamps
+
+## 3. Network and Web Operations
+
+### 3.1 Web Search Transparency
+Before web searches:
+```
+🌐 WEB SEARCH INITIATED
+Query: [search terms]
+Search Engine: [Google|Bing|DuckDuckGo|other]
+Purpose: [why search is needed]
+Data Usage: [what data will be collected]
+```
+
+### 3.2 Network Privacy
+- **MINIMIZE**: Collect only necessary data from web searches
+- **NO TRACKING**: Avoid search engines that track user behavior when possible
+- **LOCAL CACHE**: Cache search results locally to reduce repeated queries
+
+## 4. Third-Party Dependencies
+
+### 4.1 Package Security Criteria
+Third-party packages must meet ALL criteria:
+- **POPULARITY**: >1000 weekly downloads OR well-established in ecosystem
+- **MAINTENANCE**: Active commits within last 6 months
+- **DOCUMENTATION**: Comprehensive docs and examples
+- **SECURITY**: No high/critical CVEs in recent versions
+- **LICENSE**: Compatible with project (MIT, Apache, BSD preferred)
+- **REPUTATION**: Maintained by recognized developers/organizations
+
+### 4.2 Code Snippet Vetting
+External code snippets must:
+- Come from reputable sources (official docs, established tutorials, verified developers)
+- Be reviewed for security vulnerabilities before inclusion
+- Include source attribution
+- Be adapted/sanitized rather than copied verbatim
+
+### 4.3 Version Control
+- **PIN VERSIONS**: Always specify exact versions, not ranges
+- **INTEGRITY**: Verify checksums when available
+- **AUDIT**: Regular dependency security audits
+
+## 5. Data Protection
+
+### 5.1 Sensitive Data Handling
+- **DETECTION**: Identify API keys, passwords, tokens, personal data in code
+- **PREVENTION**: Never log, display, or store sensitive data in plain text
+- **MASKING**: Replace sensitive values with placeholders in outputs
+
+### 5.2 Error Information Security
+- **SANITIZE**: Remove file paths, system info, and sensitive data from error messages
+- **LOG SECURITY**: Ensure logs don't contain sensitive information
+- **STACK TRACES**: Sanitize before displaying to users
+
+### 5.3 API Key Management
+```
+🔐 API KEY DETECTED
+Type: [service name]
+Action: [masked in display/logs]
+Security: [environment variable recommended]
+```
+
+## 6. User Control and Transparency
+
+### 6.1 Operation Disclosure
+Always disclose:
+- What actions will be performed
+- What files will be accessed or modified  
+- What network requests will be made
+- What data will be collected or transmitted
+
+### 6.2 Consent Mechanisms
+- **EXPLICIT**: Clear yes/no prompts for security-sensitive operations
+- **GRANULAR**: Allow users to approve/deny specific actions
+- **PERSISTENT**: Remember user preferences for recurring operations
+
+## 7. Monitoring and Audit Trail
+
+### 7.1 Security Event Logging
+Log all security-relevant events:
+- File access attempts outside project
+- Global installation requests
+- Third-party package additions
+- Web searches and external requests
+- Security violations and their resolution
+
+### 7.2 Milestone Documentation
+Document in project journal when:
+- New dependencies are added
+- Security configurations change
+- Global installations occur
+- Security violations are detected and resolved
+
+## 8. Recovery and Incident Response
+
+### 8.1 Violation Response
+When security rules are violated:
+1. **IMMEDIATE**: Stop the violating operation
+2. **ALERT**: Notify user with detailed violation report
+3. **LOG**: Record incident with full context
+4. **REVIEW**: Analyze why violation occurred
+5. **PREVENT**: Update rules to prevent recurrence
+
+### 8.2 Rollback Procedures
+- **BACKUP**: Create backups before risky operations
+- **UNDO**: Provide rollback options for system changes
+- **RECOVERY**: Clear procedures for undoing global installations
+
+## 9. Input Validation and Sanitization
+
+### 9.1 User Input Security
+- **VALIDATE**: All user inputs against expected patterns
+- **SANITIZE**: Remove potentially dangerous characters/commands
+- **ESCAPE**: Properly escape inputs used in system commands
+
+### 9.2 Code Injection Prevention
+- **NO EVAL**: Never use eval() or similar dynamic code execution
+- **PARAMETERIZE**: Use parameterized queries/commands
+- **VALIDATE**: Check all dynamic code generation
+
+## 10. File Type Specific Security
+
+### 10.1 Code Files (.js, .ts, .py, .java, etc.)
+- **DEPENDENCY SCANNING**: Check for vulnerable packages in imports
+- **SECRET DETECTION**: Scan for hardcoded credentials, API keys, tokens
+- **INJECTION PREVENTION**: Validate dynamic code generation and SQL queries
+- **SECURE CODING**: Enforce secure coding practices per language
+
+### 10.2 Configuration Files (.env, .config, package.json, etc.)
+- **SECRET MANAGEMENT**: Ensure no secrets in version control
+- **PERMISSION VALIDATION**: Check file permissions for sensitive configs
+- **DEPENDENCY SECURITY**: Validate all declared dependencies
+- **ENVIRONMENT SEPARATION**: Ensure dev/staging/prod environment isolation
+
+### 10.3 Infrastructure Files (Dockerfile, docker-compose.yml, etc.)
+- **BASE IMAGE SECURITY**: Use official, updated base images
+- **PRIVILEGE ESCALATION**: Avoid running as root when possible
+- **SECRET INJECTION**: Use proper secret management, not hardcoded values
+- **NETWORK SECURITY**: Minimize exposed ports and network access
+
+### 10.4 Web Files (.html, .css, .scss, etc.)
+- **XSS PREVENTION**: Validate any dynamic content injection
+- **CSP HEADERS**: Recommend Content Security Policy implementation
+- **RESOURCE INTEGRITY**: Use SRI for external resources
+- **HTTPS ENFORCEMENT**: Ensure secure protocol usage
+
+## 11. Implementation Notes
+
+### 11.1 Rule Enforcement
+- Rules apply to ALL AI operations (agent, tools, scripts, MCPs)
+- No exceptions without explicit user override
+- Violations result in operation termination
+
+### 11.2 Updates and Maintenance
+- Review rules quarterly for new threats
+- Update based on security incidents
+- Maintain compatibility with project needs
+
+## Alert Format Standards
+
+```
+🚨 SECURITY ALERT TYPE 🚨
+Details: [specific information]
+Impact: [potential consequences]
+Action Required: [user decision needed]
+Timeout: [if applicable]
+```
+
+---
+
+**Last Updated**: 2025-06-14
+**Version**: 1.3
+**Applies To**: All AI operations within this project
+**Auto-Attachment**: Enabled for all code, config, infrastructure, and documentation files
+
+**/*.{js,jsx,ts,tsx,py,java,go,rs,php,rb,cs,cpp,c,h,hpp,scala,kt,swift,dart,elm,clj,cljs,hs,ml,fs,ex,exs,erl,pl,lua,jl,nim,zig,v,cr,d,pas,ada,cob,f90,f95,f03,f08,for,m,mm,r,html,htm,css,scss,sass,less,styl,vue,svelte,json,yaml,yml,toml,xml,ini,conf,cfg,env,properties,sql,proto,thrift,graphql,ipynb,pyx,pxd,pxi,md,mdx,rst,txt,dockerfile,makefile,cmake,cmakelists.txt,package.json,requirements.txt,pipfile,gemfile,pom.xml,build.gradle,cargo.toml,composer.json,setup.py,pyproject.toml,poetry.lock,yarn.lock,package-lock.json,pnpm-lock.yaml,go.mod,go.sum} **/*{.config.js,.config.ts,webpack.config.*,vite.config.*,next.config.*,nuxt.config.*,vue.config.*,angular.json,tsconfig.json,jsconfig.json,eslint.*,prettier.*,babel.*,rollup.*,gulpfile.*,gruntfile.*} **/*.env* **/docker-compose.{yml,yaml}
