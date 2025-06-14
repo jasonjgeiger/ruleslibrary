@@ -135,6 +135,35 @@ To integrate this rules library into your own Cursor project:
 3. Follow the enhanced documentation standards
 4. Maintain accurate chronological records
 
+## Rule File Headers (.mdc Format)
+
+### Privacy & Security Rule Header
+```yaml
+---
+description: Privacy and Security Guidelines for AI Agent Operations
+globs: **/*.{js,jsx,ts,tsx,py,java,go,rs,php,rb,cs,cpp,c,h,hpp,scala,kt,swift,dart,elm,clj,cljs,hs,ml,fs,ex,exs,erl,pl,lua,jl,nim,zig,v,cr,d,pas,ada,cob,f90,f95,f03,f08,for,m,mm,r,html,htm,css,scss,sass,less,styl,vue,svelte,json,yaml,yml,toml,xml,ini,conf,cfg,env,properties,sql,proto,thrift,graphql,ipynb,pyx,pxd,pxi,md,mdx,rst,txt,dockerfile,makefile,cmake,package.json,requirements.txt,pipfile,gemfile,pom.xml,build.gradle,cargo.toml,composer.json,setup.py,pyproject.toml,poetry.lock,yarn.lock,package-lock.json,pnpm-lock.yaml,go.mod,go.sum},**/*{.config.js,.config.ts},**/webpack.config.*,**/vite.config.*,**/next.config.*,**/nuxt.config.*,**/vue.config.*,**/angular.json,**/tsconfig.json,**/jsconfig.json,**/eslint.*,**/prettier.*,**/babel.*,**/rollup.*,**/gulpfile.*,**/gruntfile.*,**/*.env*,**/docker-compose.{yml,yaml},**/cmakelists.txt
+alwaysApply: true
+autoAttach: true
+---
+```
+
+### Responsible AI Rule Header
+```yaml
+---
+description: Responsible AI Implementation Rules based on Microsoft HAX Guidelines
+globs: **/*.{js,jsx,ts,tsx,py,java,go,rs,php,rb,cs,cpp,c,h,hpp,scala,kt,swift,dart,elm,clj,cljs,hs,ml,fs,ex,exs,erl,pl,lua,jl,nim,zig,v,cr,d,pas,ada,cob,f90,f95,f03,f08,for,m,mm,r,html,htm,css,scss,sass,less,styl,vue,svelte,json,yaml,yml,toml,xml,ini,conf,cfg,env,properties,sql,proto,thrift,graphql,ipynb,pyx,pxd,pxi,md,mdx,rst,txt,dockerfile,makefile,cmake,package.json,requirements.txt,pipfile,gemfile,pom.xml,build.gradle,cargo.toml,composer.json,setup.py,pyproject.toml,poetry.lock,yarn.lock,package-lock.json,pnpm-lock.yaml,go.mod,go.sum},**/*{.config.js,.config.ts},**/webpack.config.*,**/vite.config.*,**/next.config.*,**/nuxt.config.*,**/vue.config.*,**/angular.json,**/tsconfig.json,**/jsconfig.json,**/eslint.*,**/prettier.*,**/babel.*,**/rollup.*,**/gulpfile.*,**/gruntfile.*,**/*.env*,**/docker-compose.{yml,yaml},**/cmakelists.txt
+alwaysApply: true
+autoAttach: true
+---
+```
+
+### Key Features of Auto-Attachment Headers
+- **Comprehensive File Coverage**: 70+ file extensions across all major programming languages
+- **Smart Targeting**: Automatic application based on file type relevance
+- **Always Apply**: `alwaysApply: true` ensures consistent rule enforcement
+- **Auto Attach**: `autoAttach: true` enables automatic rule attachment
+- **Technology Agnostic**: Covers frontend, backend, mobile, data science, and infrastructure files
+
 For detailed information, see the respective files in `docs/rules/`.
 
 ---
