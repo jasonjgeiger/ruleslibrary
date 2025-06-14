@@ -1,0 +1,178 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Git Rules
+
+## Commit Guidelines
+
+### When to Commit
+1. **Feature Completion**
+   - Finished implementing a feature
+   - All tests passing
+   - Documentation updated
+   - Code reviewed (if applicable)
+
+2. **Bug Fixes**
+   - Issue resolved
+   - Tests added/updated
+   - Root cause documented
+   - Fix verified
+
+3. **Documentation Updates**
+   - Major documentation changes
+   - API documentation updates
+   - README modifications
+   - Rule updates
+
+4. **Refactoring**
+   - Code structure improved
+   - Performance optimized
+   - Technical debt addressed
+   - No functional changes
+
+5. **Dependency Updates**
+   - Package versions updated
+   - Security patches applied
+   - Breaking changes documented
+   - Compatibility verified
+
+### Commit Message Format
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+Types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes
+- `refactor`: Code refactoring
+- `test`: Test updates
+- `chore`: Maintenance tasks
+
+Example:
+```
+feat(auth): implement OAuth2 authentication
+
+- Add OAuth2 provider integration
+- Implement token management
+- Add authentication middleware
+- Update documentation
+
+Closes #123
+```
+
+## Branching Strategy
+
+### Branch Types
+1. **main**
+   - Production-ready code
+   - Protected branch
+   - Requires review
+   - Automated tests must pass
+
+2. **develop**
+   - Integration branch
+   - Latest development changes
+   - Feature branches merge here
+   - Automated tests must pass
+
+3. **feature/**
+   - New features
+   - Format: `feature/descriptive-name`
+   - Branch from: `develop`
+   - Merge back to: `develop`
+
+4. **bugfix/**
+   - Bug fixes
+   - Format: `bugfix/issue-description`
+   - Branch from: `develop`
+   - Merge back to: `develop`
+
+5. **hotfix/**
+   - Production fixes
+   - Format: `hotfix/issue-description`
+   - Branch from: `main`
+   - Merge back to: `main` and `develop`
+
+6. **release/**
+   - Release preparation
+   - Format: `release/vX.Y.Z`
+   - Branch from: `develop`
+   - Merge back to: `main` and `develop`
+
+### Branch Lifecycle
+1. Create branch from appropriate source
+2. Develop and commit changes
+3. Keep branch up to date with source
+4. Create pull request
+5. Address review comments
+6. Merge and delete branch
+
+## Version Control Best Practices
+
+### Before Committing
+1. Review changes (`git diff`)
+2. Check status (`git status`)
+3. Run tests
+4. Update documentation
+5. Follow commit message format
+
+### Branch Management
+1. Keep branches short-lived
+2. Delete merged branches
+3. Regular cleanup of stale branches
+4. Keep branch names descriptive
+5. Use consistent naming conventions
+
+### Pull Request Guidelines
+1. Clear title and description
+2. Link related issues
+3. List changes made
+4. Include testing instructions
+5. Update documentation
+6. Request appropriate reviewers
+
+### Code Review Checklist
+1. Functionality works as expected
+2. Tests are included and passing
+3. Documentation is updated
+4. Code follows style guidelines
+5. No security vulnerabilities
+6. Performance impact considered
+
+## Git Workflow
+
+### Daily Workflow
+1. Pull latest changes
+2. Create feature branch
+3. Make changes
+4. Commit following guidelines
+5. Push changes
+6. Create pull request
+
+### Release Workflow
+1. Create release branch
+2. Version bump
+3. Update changelog
+4. Run full test suite
+5. Create pull request
+6. Merge to main
+7. Tag release
+8. Merge back to develop
+
+### Hotfix Workflow
+1. Create hotfix branch
+2. Fix issue
+3. Add/update tests
+4. Update documentation
+5. Create pull request
+6. Merge to main
+7. Tag hotfix release
+8. Merge back to develop
