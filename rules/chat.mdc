@@ -1,5 +1,5 @@
 ---
-description: 
+description: Defines interaction protocol for assistant responses, maintaining concise, code-first communication
 globs: 
 alwaysApply: true
 ---

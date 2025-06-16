@@ -1,9 +1,294 @@
 ---
-description: Rules for chat responses to update documentation files based on milestones
+description: 
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 # Documentation Rules
+
+## Core Principles
+- Maintain clear separation between documentation types
+- Ensure chronological accuracy
+- Provide comprehensive context
+- Enable traceability
+- Support future reference
+
+## Documentation Types
+
+### 1. README
+- **Purpose**: High-level project overview
+- **Location**: `README.md`
+- **Format**:
+  ```markdown
+  # Project Name
+
+  [One paragraph description of what the project is and how it works at a glance]
+
+  ## Quick Start
+  ```bash
+  [Installation commands]
+  ```
+
+  ## Tech Stack
+  - [List of main technologies]
+
+  ## Documentation
+  - [Links to other documentation]
+  ```
+- **Content Guidelines**:
+  - Focus on what the project does, not how
+  - Keep description concise and clear
+  - Avoid implementation details
+  - No technical specifications
+  - No design tokens
+  - No component details
+  - No project structure
+  - No development setup
+  - No changelog
+  - No features section
+
+### 2. Prompt-Journal
+- **Purpose**: Track high-level project milestones and decisions
+- **Location**: `docs/prompt-journal.md`
+- **Format**:
+  ```markdown
+  ## YYYY-MM-DD: Clear, Descriptive Title
+
+  ### Prompt
+  [Original request or trigger]
+
+  ### Summary of Response & Actions
+  - [Bulleted list of key actions]
+  - [Include context and rationale]
+
+  ### Technical Details
+  - Files modified:
+    - [List of changed files]
+  - Key changes:
+    - [Technical implementation details]
+
+  ### Next Steps
+  - [Future considerations]
+  - [Follow-up actions]
+
+  ### Impact
+  - [Significant effects on project]
+  - [User experience changes]
+
+  ### Related Documentation
+  - [Links to related logs/docs]
+  ```
+
+### 3. Implementation Logs
+- **Purpose**: Detailed technical analysis and implementation records
+- **Location**: `docs/logs/YYYY-MM-DD-descriptive-name.md`
+- **Format**:
+  ```markdown
+  # Clear, Descriptive Title
+
+  ## Context
+  [Background and motivation]
+
+  ## Technical Decisions
+  ### [Decision Name]
+  - **Decision**: [What was decided]
+  - **Rationale**: [Why it was decided]
+  - **Implementation**: [How it was implemented]
+    ```[language]
+    [Relevant code snippets]
+    ```
+
+  ## Implementation Details
+  ### [Component/Feature Name]
+  - **Location**: [File path]
+  - **Changes**:
+    - [Specific modifications]
+    - [Implementation details]
+    - [Configuration changes]
+
+  ## Testing Notes
+  ### [Test Category]
+  - [Verification steps]
+  - [Test results]
+  - [Edge cases]
+
+  ## Impact Analysis
+  ### Positive Impacts
+  1. **[Category]**
+     - [Specific impacts]
+     - [Benefits]
+
+  ### Potential Challenges
+  1. **[Category]**
+     - [Potential issues]
+     - [Mitigation strategies]
+
+  ## Next Steps
+  1. **Short Term**
+     - [Immediate actions]
+     - [Quick wins]
+
+  2. **Medium Term**
+     - [Planned improvements]
+     - [Feature enhancements]
+
+  3. **Long Term**
+     - [Strategic goals]
+     - [Future considerations]
+
+  ## Related Files
+  - [List of modified files]
+  - [Related documentation]
+  ```
+
+### 4. History Tracking
+- **Purpose**: Track component and feature evolution
+- **Location**: `.specstory/history/`
+- **Format**:
+  ```markdown
+  # Component/Feature Name History
+
+  ## YYYY-MM-DD: Change Title
+  ### Context
+  [Why the change was made]
+
+  ### Changes
+  - [Specific modifications]
+  - [Implementation details]
+
+  ### Impact
+  - [Effects on functionality]
+  - [User experience changes]
+  ```
+
+## Required Content
+
+### All Documentation
+- ISO 8601 date (verified)
+- Clear, descriptive title
+- Context and motivation
+- Technical details
+- Impact assessment
+- Related documentation links
+
+### README Specific
+- Project name
+- One-paragraph description
+- Quick start instructions
+- Tech stack list
+- Documentation links
+
+### Prompt-Journal Specific
+- Original prompt/request
+- Summary of actions
+- Next steps
+- Cross-references to logs
+
+### Implementation Logs Specific
+- Technical decisions with rationale
+- Implementation details with code
+- Testing notes by category
+- Impact analysis
+- Short/medium/long term next steps
+
+### History Specific
+- Component/feature context
+- Change details
+- Impact on functionality
+- User experience effects
+
+## Best Practices
+
+### Writing Guidelines
+1. **Clarity**
+   - Use clear, concise language
+   - Provide sufficient context
+   - Include rationale for decisions
+   - Document assumptions
+
+2. **Structure**
+   - Follow consistent formatting
+   - Use appropriate headings
+   - Include required sections
+   - Maintain chronological order
+
+3. **Technical Details**
+   - Include relevant code snippets
+   - Document configuration changes
+   - Note testing procedures
+   - List affected files
+
+4. **Cross-Referencing**
+   - Link related documentation
+   - Reference previous changes
+   - Note dependencies
+   - Track impact
+
+### README Guidelines
+1. **Description**
+   - Focus on user perspective
+   - Explain core functionality
+   - Avoid implementation details
+   - Keep it concise
+
+2. **Content**
+   - What the project does
+   - How it works at a high level
+   - Basic setup instructions
+   - Main technologies used
+   - Links to detailed docs
+
+3. **Style**
+   - Clear and direct language
+   - No technical jargon
+   - No unnecessary descriptors
+   - No redundant information
+
+### Maintenance
+1. **Regular Updates**
+   - Update documentation promptly
+   - Review for accuracy
+   - Remove outdated information
+   - Archive when necessary
+
+2. **Quality Checks**
+   - Verify date accuracy
+   - Check formatting consistency
+   - Validate links
+   - Review completeness
+
+3. **Organization**
+   - Maintain clear file structure
+   - Use consistent naming
+   - Follow location guidelines
+   - Update indexes
+
+## Common Pitfalls to Avoid
+- ❌ Missing dates or incorrect date formats
+- ❌ Incomplete context or rationale
+- ❌ Missing technical details
+- ❌ Poor cross-referencing
+- ❌ Inconsistent formatting
+- ❌ Outdated information
+- ❌ Missing impact assessment
+- ❌ Incomplete testing notes
+- ❌ README with implementation details
+- ❌ README with features section
+- ❌ README with technical specifications
+
+## Review Checklist
+- [ ] Date is in ISO 8601 format
+- [ ] Title is clear and descriptive
+- [ ] All required sections are present
+- [ ] Technical details are complete
+- [ ] Cross-references are valid
+- [ ] Formatting is consistent
+- [ ] Impact is assessed
+- [ ] Testing is documented
+- [ ] Next steps are identified
+- [ ] Related documentation is linked
+- [ ] README is high-level only
+- [ ] README has no technical details
+- [ ] README has no features section
 
 ## CRITICAL: Date Accuracy Requirements
 
@@ -19,67 +304,6 @@ alwaysApply: true
 2. **Cross-Reference**: Verify date matches expected timeframe
 3. **Consistency Check**: Ensure all related files use same accurate date
 4. **File Naming**: Use verified date in log filenames (`YYYY-MM-DD-description.md`)
-
-## Documentation Types
-
-1. **Prompt-Journal**
-   - **Purpose**: Chronological record of development milestones
-   - **Location**: `docs/prompt-journal.md`
-   - **Content**:
-     - What was done
-     - When it was done
-     - Why it was done
-     - High-level impact
-   - **Format**: 
-     - Structured entries with prompt, actions, and next steps
-     - Date format: YYYY-MM-DD (VERIFIED via date command)
-     - Always use current date for new entries
-     - Verify date accuracy before creating entries
-   - **Entry Structure**:
-     - Date and descriptive title (VERIFIED DATE)
-     - Original prompt/request
-     - Actions taken
-     - Impact of changes
-     - Next steps
-
-2. **Logs**
-   - **Purpose**: Detailed technical analysis
-   - **Location**: `docs/logs/YYYY-MM-DD-descriptive-name.md`
-   - **Content**:
-     - How things were done
-     - Technical decisions and rationale
-     - Implementation patterns
-     - Detailed analysis
-   - **Format**: Free-form technical documentation
-   - **Creation Guidelines**:
-     - Use format: `YYYY-MM-DD-descriptive-name.md` (VERIFIED DATE)
-     - Include:
-       - Context of the discussion
-       - Detailed analysis or explanation
-       - Any relevant code snippets
-       - References to related files or documentation
-     - Reference in prompt-journal when created
-
-3. **Rules**
-   - **Purpose**: Guidelines and standards for development
-   - **Location**: `docs/rules/*.mdc`
-   - **Content**:
-     - Development standards
-     - Best practices
-     - Process guidelines
-   - **Format**: Structured markdown with clear sections
-   - **Date Requirements**: All "Last Updated" fields must use VERIFIED current date
-
-## Milestone Identification
-
-Track and document significant events:
-- Completed tasks or features
-- Major architectural decisions
-- Implementation of key functionality
-- Important refactoring
-- Technology selections
-- Critical issue resolutions
-- Project structure changes
 
 ## Documentation Update Process
 
